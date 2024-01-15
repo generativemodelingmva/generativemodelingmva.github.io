@@ -16,4 +16,4 @@ https://generativemodelingmva.github.io/
 
 # Practical session 2
 
-[WGAN learning on a synthetic dataset.]https://colab.research.google.com/github/generativemodelingmva/generativemodelingmva.github.io/blob/main/tp2324/tp2_generative_networks.ipynb)
+[WGAN learning on a synthetic dataset.](https://colab.research.google.com/github/generativemodelingmva/generativemodelingmva.github.io/blob/main/tp2324/tp2_generative_networks.ipynb)
