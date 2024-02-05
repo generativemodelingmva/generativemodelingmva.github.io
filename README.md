@@ -21,3 +21,8 @@ https://generativemodelingmva.github.io/
 # Practical session 3
 
 [DCGAN learning for MNIST](https://colab.research.google.com/github/generativemodelingmva/generativemodelingmva.github.io/blob/main/tp2324/tp3_wgan_mnist.ipynb)
+
+# Practical session 4
+
+[Hierarchical VAE](tp2324/tp4_mva_hierarchical_vae_simple_loss.ipynb)
+
