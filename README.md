@@ -26,3 +26,8 @@ https://generativemodelingmva.github.io/
 
 [Hierarchical VAE](tp2324/tp4_mva_hierarchical_vae_simple_loss.ipynb)
 
+# Practical session 6
+
+[Diffusion models: Sampling and conditional sampling of a pretrained DDPM model](tp2324/tp6_mva_diffusion_model_sampling.ipynb)
+
+
