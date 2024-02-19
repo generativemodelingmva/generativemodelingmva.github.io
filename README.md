@@ -32,7 +32,7 @@ https://generativemodelingmva.github.io/
 
 [Exercise 2: Inverse problems with generative prior](tp2324/tp5_exo2_inverse_problem_with_generative_prior.ipynb)
 
-# Practical session 6
+# Practical session 6 & 7
 
 [Diffusion models: Sampling and conditional sampling of a pretrained DDPM model](tp2324/tp6_mva_diffusion_model_sampling.ipynb)
 
