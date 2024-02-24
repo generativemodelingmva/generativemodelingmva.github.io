@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+   <head>
+       <title>MVA: Modèles génératifs pour l'image</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+       <link rel="stylesheet" type="text/css" title="design" href="style_project.css" />
+   </head>
+   <body>
+
+        <div id="inbody">
+
+
+            <h2>Projets du</h2>
+            <h1>Cours MVA : Modèles génératifs pour l’image</h1>
+            <h2>(année 2023-2024)</h2>
+            <h2>Master 2 MVA, ENS Paris-Saclay</h2>
+
+            </br></br>
+            <ul>
+	      <li>Projects by Groups of 2 students.</li>
+              <li>Report due for March 25th:
+		<ul>
+		  <li> 4 to 8 pages in simple column format. </li>
+		  <li> Figures and References can be added in appendix (not counted in the 8 pages).</li>
+		  <li> Introduction should place the context and connect with the course sessions. </li>
+		  <li> The practical part should include experiments which are not in the original paper<br>
+		  (other data, other inverse problem, relevant low-dimensional experiments, etc). </li>
+		</ul>
+		</li>
+	      <li>Codes for your experiments should be sent as a zip archive (not including large database).</li>
+	      <li>Each project comes with a suggestion of 3 work tracks (which you may follow, or not).</li>
+	      <li>Defense: 20' presentation followed by 15' questions.</li>
+	      <li>Project Defense at Télécom Paris between March 25th and March 29th.</li>
+            </ul>
+            <br/><br/><br/>
+
+            <h2>List of Projects</h2>
+
+	    <br/><br/>
+
+            <h3>Project-01: <a href="https://arxiv.org/abs/2211.12461">A Neural-Network-Based Convex Regularizer for Image Reconstruction</a></h3>
+
+            <ul>
+              <li>Explain convergence guarantees obtained with this regularizer.</li>
+              <li>What is the interest of doing a multi-gradient-step instead of mono-gradient-step?</li>
+              <li>Compare with Gradient-step Plug-and-Play (TP9).</li>
+            </ul>
+
+	    <br/><br/>
+
+            <h3>Project-02: <a href="https://arxiv.org/abs/1801.01401">Demystifying MMD GANs</a></h3>
+
+            <ul>
+              <li>Explain the differences between WGAN and MMD-GAN (for theory and training).</li>
+              <li>Explain the gradient bias problem that may happen with GANs or WGANs.</li>
+              <li>Train a MMD-GAN for a low-dimensional dataset (sklearn make_moons) and a large-scale dataset.</li>
+            </ul>
+
+	    <br/><br/>
+
+
+	    <h3>Project-03: <a href="https://arxiv.org/abs/2201.12220">Neural Optimal Transport</a></h3>
+
+            <ul>
+              <li>Explain how weak optimal transport can be used for generative modeling.</li>
+              <li>What particular problems may be expected when learning with weak optimal transport.</li>
+              <li>Apply the proposed methodology to a synthetic 2D dataset and an image dataset.</li>
+            </ul>
+
+	    <br/><br/>
+
+
+	    <h3>Project-04: <a href="https://arxiv.org/abs/2304.11134">Plug-and-Play split Gibbs sampler: embedding deep generative priors in Bayesian inference</a></h3>
+
+            <ul>
+	      <li>In PnP split Gibbs sampling, can we use generative models with latent variables?</li>
+              <li>Compare PnP split Gibbs sampling with Chung et al., 2023 (TP6, Exo3).</li>
+              <li>Are there convergence guarantees for the PnP Gibbs sampling algorithm?</li>
+            </ul>
+
+	    <br/><br/>
+
+            <h3>Project-05: <a href="https://openreview.net/pdf?id=9_gsMA8MRKQ">Pseudoinverse-Guided Diffusion Models for Inverse Problems</a></h3>
+
+            <ul>
+              <li>Experiments using the DDPM model used in TP6.</li>
+              <li>Compare theoretically and experimentally with Chung et al. ICLR 2023 (TP6, Exo 3) for inpainting and Gaussian deblurring.</li>
+	            <li>Is the method stable in when the noise measurement increases for Gaussian deblurring?</li>
+            </ul>
+
+	    <br/><br/>
+
+            <h3>Project-06: <a href="https://openreview.net/pdf?id=XKBFdYwfRo">Solving Linear Inverse Problems Provably via Posterior Sampling with Latent Diffusion Models</a></h3>
+
+            <ul>
+              <li>Discuss the adequation between the algorithm and the theoretical results.</li>
+              <li>For inpainting, does the gray color used to fill the holes has an influence on the algorithm?</li>
+              <li>For super-resolution, compute the standard deviation of each pixels when running several times the algorithm and discuss the results.</li>
+            </ul>
+
+	    <br/><br/>
+
+
+            <h3>Project-07: <a href="https://arxiv.org/abs/2201.11793">Denoising Diffusion Restoration Models</a></h3>
+
+            <ul>
+              <li>Compare theoretically and experimentally with Chung et al. ICLR 2023 (TP6, Exo 3) for inpainting and Gaussian deblurring.</li>
+              <li>Evaluate the stochastic aspect of the sampling on some example and discuss the results.</li>
+              <li>Can you extend the model to non-linear problems?</li>
+            </ul>
+
+	    <br/><br/>
+
+
+            <h3>Project-08: <a href="https://arxiv.org/abs/2303.01469">Consistency Models</a></h3>
+
+            <ul>
+              <li>Train a diffusion model on a 2D toy dataset (eg sklearn make_moons), and then train a consistency model using the two different approaches (distillation of diffusion VS independent training).</li>
+              <li>For inpainting, discuss the quality of the blending between known and unknwon pixels.</li>
+              <li>Compare experimentally with Chung et al. 2023 (TP6).</li>
+
+            </ul>
+
+	    <br/><br/>
+
+            <h3>Project-09: <a href="https://arxiv.org/abs/2307.11714">Convergence of SGD for Training Neural Networks with Sliced Wasserstein Losses</a></h3>
+
+            <ul>
+              <li>Summarize the main results of the paper and explain the insight benefits with Sliced Wasserstein.</li>
+              <li>Use Algorithm 1 to learn a generative network for a 2D continuous target distribution.</li>
+              <li>Use the proposed algorithm to learn a generative network for a large-scale image dataset.</li>
+            </ul>
+
+	    <br/><br/>
+
+
+            <h3>Project-10: <a href="https://arxiv.org/abs/2301.10862">Learning an Optimal Transport Brenier Map</a></h3>
+
+            <ul>
+              <li>How can one constrain a neural network to be the gradient of a convex function?</li>
+              <li>Use the algorithm for Brenier maps to compute a generative network for a low-dimensional example.</li>
+              <li>Use the proposed algorithm to learn a generative network for a large-scale image dataset.</li>
+            </ul>
+
+	    <br/><br/>
+
+
+            <h3>Project-11: <a href="https://arxiv.org/abs/1907.05254">Texture Generation using GMM Optimal Transport</a></h3>
+
+            <ul>
+              <li>Explain the relation and differences between usual OT and GMM OT.</li>
+              <li>Exploit the GMM OT cost to learn a generative model for a low-dimensional example.</li>
+              <li>Use the proposed algorithm to learn a generative network for a large-scale image dataset.</li>
+            </ul>
+
+	    <br/><br/>
+
+	    <h3>Project-12: <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Huang_Arbitrary_Style_Transfer_ICCV_2017_paper.pdf">Arbitrary Style Transfer in Real-Time with Adaptive Instance Normalization</a></h3>
+
+            <ul>
+              <li>Explain in detail the concept of Adaptive Instance Normalization and compare with simple BatchNorm.</li>
+              <li>Implement AdaIN in order to perform style transfer between two images.</li>
+              <li>Compare with other style transfer method (e.g. by Gatys et al.).</li>
+            </ul>
+
+	    <br/><br/>
+
+
+	    <h3>Project-13: <a href="https://arxiv.org/abs/1912.04958">Analyzing and Improving the Image Quality of StyleGAN</a></h3>
+
+            <ul>
+              <li>Study and implement the inversion procedure for the StyleGAN network.</li>
+              <li>Are you able to identify some image characteristics in the latent space of StyleGAN?</li>
+              <li>Can the inversion method be used to address general imaging inverse problems?</li>
+            </ul>
+
+	    <br/><br/>
+
+
+	    <!--
+	    <h3>Project : <a href="https://arxiv.org/abs/2004.02546">Image editing within the latent space of StyleGAN</a></h3>
+
+            <ul>
+              <li>Explain the characteristics of the latent space of StyleGAN</li>
+              <li>Implement the method of the paper to perform image editing in the latent space</li>
+              <li></li>
+            </ul>
+
+	    <br/><br/>
+	    -->
+
+	    <h3>Project-14: <a href="https://arxiv.org/abs/2212.12499">Posterior-Variance-Based Error Quantification for Inverse Problems in Imaging</a></h3>
+
+            <ul>
+              <li>Can you test the error quantification method with a Total Variation (TV) regularization for image inverse problems?</li>
+              <li>Can you test it with a deep regularization and compare the error quantification results (between TV and deep regularization)?</li>
+              <li>How do you generalize this work for RGB images?</li>
+            </ul>
+
+	    <br/><br/>
+
+
+	    <h3>Project-15: <a href="https://arxiv.org/abs/2310.10835">Provable Probabilistic Imaging using Score-Based Generative Priors</a></h3>
+
+            <ul>
+              <li>Can you test this reconstruction method with a pre-trained diffusion model?</li>
+              <li>Can you compare this method with standard diffusion model sampling?</li>
+              <li>Comment the different assumptions of the theoretical part. Can you test the optimilaty of Theorem 1 (in practice)?</li>
+            </ul>
+
+	    <br/><br/>
+
+
+	    <!-- <h3>Project : <a href=""></a></h3>
+
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+
+	    <br/><br/> -->
+
+
+        </div>
+
+    </body>
+</html>
