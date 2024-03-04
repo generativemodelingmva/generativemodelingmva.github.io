@@ -36,4 +36,11 @@ https://generativemodelingmva.github.io/
 
 [Diffusion models: Sampling and conditional sampling of a pretrained DDPM model](tp2324/tp6_mva_diffusion_model_sampling.ipynb)
 
+# Pratical session 8
+
+[PnP image deblurring with pre-learned denoisers](tp2324/tp8_pnp.ipynb)
+
+# Pratical session 9
+
+[PnP image deblurring with gradient-step denoiser](tp2324/tp9_pnp.ipynb)
 
