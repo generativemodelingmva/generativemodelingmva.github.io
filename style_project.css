@@ -1,184 +1,149 @@
-*
-{
-padding: 0px; /* Very important to deal with margins independently of the navigators */
-margin: 0px;
+:root {
+  --primary-color: #000;
+  --link-color: #000096;
+  --bg-light: #DED8CC;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --max-width: 900px;
+  --menu-height: 50px;
 }
 
-
-body
-{
-   width: 100%;
-   margin: auto; /* center the page */
-   font-family: arial, sans-serif ;
-/*    background-image: url("wpimg/paper_rpn.jpg"); */
-/* 	background-repeat: repeat; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-a /* links style */
-{
-   text-decoration: none;
-}
-a:hover /* style when the cursor is on the link */
-{
-   text-decoration: underline;
+body {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  color: #333;
 }
 
-
-#menu
-{
-   float: top;    /* put the menu on top */
-   width: 100%;
-	position:fixed;
-   padding: 0px;
-   padding-top: 12px;
-   padding-bottom: 0px;
-   text-align: center;
-   color: black;
-/*    background-image: url("wpimg/paper_rpn_red.jpg"); */
-/* 	background-repeat: repeat; */
+a {
+  text-decoration: none;
 }
 
-#menu a /* all the links of the menu */
-{
-   color: black;
-   padding-right: 15px;
-   padding-left: 15px;
-   font-size: x-large;
-   font-weight: bold;
+a:hover {
+  text-decoration: underline;
 }
 
-#menu em /* all the em of the menu */
-{
-/*    color: rgb(222,216,204); */
-   padding-right: 15px;
-   padding-left: 15px;
-   font-size: x-large;
-   font-weight: bold;
-   font-style: normal;
+/* Menu */
+#menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--menu-height);
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-
-/*******************************************************************/
-/* lastupdate at the bottom of the page */
-/*******************************************************************/
-
-/* fixed div class to display the date of the last update*/
-#lastupdate
-{
-	width: 100%;
-   float: top;
-	position: fixed;
-   padding: 0px;
-/*    color: rgb(222,216,204); */
-	text-align: right;
-/*    background-image: url("wpimg/paper_rpn_red.jpg"); */
-/* 	background-repeat: repeat; */
+#menu a {
+  color: var(--primary-color);
+  padding: 0 var(--spacing-sm);
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
-#lastupdate:after
-{
-content:"Last update: Apr  3, 2016";
-padding-right: 10px;
+/* Main content */
+#inbody {
+  max-width: var(--max-width);
+  margin: var(--menu-height) auto var(--spacing-lg);
+  padding: var(--spacing-md);
+  text-align: justify;
 }
 
-
-
-/* the  */
-#inbody
-{
-   width: 900px;
-   margin: auto; /* center the page */
-	margin-bottom: 50px;
-   padding-top: 20px;
-   padding-bottom: 20px;
-   padding-left: 15px;
-   padding-right: 15px;
-   text-align: justify;
-/*    background-image: url("wpimg/paper_rpn_white.jpg"); */
-/* 	background-repeat: repeat; */
+#inbody h1 {
+  text-align: center;
+  font-size: 1.75rem;
+  padding: var(--spacing-sm) 0 var(--spacing-xs);
 }
 
-#inbody a
-{
-   color: rgb(0,0,150);
-   font-weight: bold;
+#inbody h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: var(--spacing-xs) 0;
 }
 
-#inbody .largertext
-{
-   font-size: x-large;
+#inbody h3 {
+  font-size: 1.1rem;
+  padding: var(--spacing-xs) 0;
 }
 
-#inbody h1
-{
-   text-align: center;
-   padding-top: 15px;
-	padding-bottom: 10px;
+#inbody a {
+  color: var(--link-color);
+  font-weight: bold;
 }
 
-#inbody h2
-{
-   text-align: center;
-	padding-left: 15px;
-   padding-top: 5px;
-	padding-bottom: 5px;
+#inbody ul {
+  padding-left: 1.5rem;
+  margin: var(--spacing-xs) 0;
 }
 
-
-.floating_image
-{
-   float: left;
-	padding-right: 10px;
+#inbody li {
+  padding: var(--spacing-xs) 0;
+  line-height: 1.3;
 }
 
-.right_floating_image
-{
-/*    float: right; */
-	padding-right: 10px;
+#inbody p {
+  margin: var(--spacing-xs) 0;
+  line-height: 1.4;
 }
 
-/* for lists */
-#inbody li
-{
-	padding-top: 5px;
-	padding-bottom: 5px;
+.floating_image {
+  float: left;
+  padding-right: var(--spacing-sm);
+  margin: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) 0;
 }
 
-#inbody ul
-{
-   padding-left: 50px;
+.right_floating_image {
+  float: right;
+  padding-left: var(--spacing-sm);
+  margin: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-sm);
 }
 
-#year
-{
-	font-weight: bold;
-	text-align: center;
-	padding: 10px;
-	background: rgb(222,216,204)
+/* Last update */
+#lastupdate {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: white;
+  font-size: 0.8rem;
+  color: #666;
 }
 
-#cv
-{
-	padding: 10px;
-	background: rgb(222,216,204)
+#lastupdate:after {
+  content: "Last update: February 9, 2026";
+  padding-right: var(--spacing-xs);
 }
 
-#pub_types
-{
-    margin: auto;
+/* News block */
+.newsblock {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  margin: var(--spacing-sm) 0;
 }
 
-#inbody .newsblock
-{
-   font-size: x-large;
-   font-weight: bold;
-/* 	background-image: url("wpimg/paper_rpn_red.jpg"); */
-/*    color: rgb(222,216,204); */
-   padding-right: 15px;
-   padding-left: 15px;
-   padding-top: 5px;
-   padding-bottom: 5px;
-   margin-bottom: 15px;
-   margin-top: 15px;
+/* Responsive design */
+@media (max-width: 768px) {
+  #inbody {
+    padding: var(--spacing-sm);
+  }
+  #menu a {
+    font-size: 1rem;
+  }
+  #inbody h1 {
+    font-size: 1.5rem;
+  }
 }
