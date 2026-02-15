@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+   <head>
+       <title>MVA: Modèles génératifs pour l'image</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+       <link rel="stylesheet" type="text/css" title="design" href="style_project.css" />
+   </head>
+   <body>
+
+        <div id="inbody">
+
+
+            <h2>Projects for the</h2>
+            <h1>MVA Course: Generative Modeling</h1>
+            <h2>(2025-2026)</h2>
+            <h2>Master 2 MVA, Télécom Paris</h2>
+
+
+            </br></br>
+            <ul>
+	      <li>Projects by Groups of 2 students.</li>
+              <li>Report: <!-- due for March 21st: --> 
+		<ul>
+		  <li> 4 to 8 pages in simple column format. </li>
+		  <li> Figures and References can be added in appendix (not counted in the 8 pages).</li>
+		  <li> Introduction should place the context and connect with the course sessions. </li>
+		  <li> The practical part should include experiments which are not in the original paper<br>
+		  (other data, other inverse problem, relevant low-dimensional experiments, etc). <br>
+      Comparisons with methods seen in practice sessions is encouraged when relevant.</li>
+		</ul>
+		</li>
+	      <li>Codes for your experiments should be sent as a zip archive (not including large database).</li>
+	      <li>Each project comes with a suggestion of 3 work tracks (which you may follow, or not).</li>
+	      <li>Defense: 15' presentation followed by 15' questions.</li>
+	      <!-- <li>Project Defense at Télécom Paris between March 24th and March 26th.</li> --> 
+            </ul>
+            <br/><br/><br/>
+
+            <h2>List of Projects</h2>
+
+	    <br/><br/>
+
+            <h3>Project-01: <a href="https://arxiv.org/abs/1801.01401">Demystifying MMD GANs</a></h3>
+
+            <ul>
+              <li>Explain the differences between WGAN and MMD-GAN (for theory and training).</li>
+              <li>Explain the gradient bias problem that may happen with GANs or WGANs.</li>
+              <li>Train a MMD-GAN for a low-dimensional dataset (sklearn make_moons) and a large-scale dataset.</li>
+            </ul>
+
+	    <br/><br/>
+
+	    
+	    <h3>Project-02: <a href="https://arxiv.org/abs/2007.13640">Solving Linear Inverse Problems Using the Prior Implicit in a Denoiser</a></h3>
+
+            <ul>
+              <li>Compare the proposed generative algorithm with the DDPM scheme</li>
+              <li>Test the generative algorithm using the score network of the last practical session</li>
+              <li>Test the restoration algorithm with another denoiser (e.g. DRUNet)</li>
+            </ul>
+
+	    <br/><br/>
+	    
+            <h3>Project-03: <a href="https://arxiv.org/abs/2305.08995">Denoising Diffusion Models for Plug-and-Play Image Restoration</a></h3>
+
+            <ul>
+              <li>Compare with the DPS algorithm seen in class</li>
+              <li>Test the DiffPIR algorithms with other denoising prior (e.g. DRUNet)</li>
+              <li>Compare DiffPIR with other plug-and-play methods</li>
+            </ul>
+
+	    <br/><br/>
+
+
+	    <h3>Project-04: <a href="https://arxiv.org/abs/2304.11134">Plug-and-Play split Gibbs sampler: embedding deep generative priors in Bayesian inference</a></h3>
+
+            <ul>
+	      <li>In PnP split Gibbs sampling, can we use generative models with latent variables?</li>
+              <li>Compare PnP split Gibbs sampling with Chung et al., 2023 (TP6, Exo3).</li>
+              <li>Are there convergence guarantees for the PnP Gibbs sampling algorithm?</li>
+            </ul>
+
+	    <br/><br/>
+
+            <h3>Project-05: <a href="https://openreview.net/pdf?id=9_gsMA8MRKQ">Pseudoinverse-Guided Diffusion Models for Inverse Problems</a></h3>
+
+            <ul>
+              <li>Experiments using the DDPM model used in TP6.</li>
+              <li>Compare theoretically and experimentally with Chung et al. ICLR 2023 (TP6, Exo 3) for inpainting and Gaussian deblurring.</li>
+	            <li>Is the method stable in when the noise measurement increases for Gaussian deblurring?</li>
+            </ul>
+
+	    <br/><br/>
+
+            <h3>Project-06: <a href="https://openreview.net/pdf?id=XKBFdYwfRo">Solving Linear Inverse Problems Provably via Posterior Sampling with Latent Diffusion Models</a></h3>
+
+            <ul>
+              <li>Discuss the adequation between the algorithm and the theoretical results.</li>
+              <li>Ablation experiments: Can you assess what is the most important term for conditionning? Are they all necessary?</li>
+              <li>For super-resolution, compute the standard deviation of each pixel when running several times the algorithm and discuss the results.</li>
+            </ul>
+
+	    <br/><br/>
+
+	    <h3>Project-07: <a href="https://arxiv.org/abs/2502.03686">Variational Control for Guidance in Diffusion Models</a></h3>
+	    Focus your discussions and experiments only on the case of discrete-time diffusion models and linear non blind inverse problems.
+            <ul>
+              <li>In the case of linear non blind inverse problems, explicit the algorithm steps and make a comparison with the DPS algorithm (Chung et al 2023) seen in class.</li>
+              <li>Test the proposed control in place of the one proposed by the DPS algorithm for deblurring and random inpainting on FFHQ? Is it well adapted to the stochastic DDPM sampler?</li>
+              <li>Test the code provided by the authors on large area inpainting (like squares in faces as done in DPS) on a few images. Are the results satisfying?</li>
+            </ul>
+
+	    <br/><br/>
+
+
+            <h3>Project-08: <a href="https://arxiv.org/abs/2303.01469">Consistency Models</a></h3>
+
+            <ul>
+              <li>Train a diffusion model on a 2D toy dataset (eg sklearn make_moons), and then train a consistency model using the two different approaches (distillation of diffusion VS independent training).</li>
+              <li>For inpainting, discuss the quality of the blending between known and unknwon pixels.</li>
+              <li>Compare experimentally with Chung et al. 2023 (TP6).</li>
+
+            </ul>
+
+	    <br/><br/>
+
+
+ <h3>Project-09: <a href="https://arxiv.org/abs/2509.26287">FLOWER: A Flow-Matching Solver for Inverse Problems</a></h3>
+
+            <ul>
+              <li>Explain the method using Figure 1</li>
+              <li>Test on toy datasets (GMM (See appendix 8.4.1), in 2D for visualization of the steps 1,2,3.)</li>
+              <li>Compare with DPS</li>
+            </ul>
+
+	    <br/><br/>
+
+
+
+ 
+ <h3>Project-10: <a href="https://openreview.net/forum?id=fs2Z2z3GRx">FIG: Flow with Interpolant Guidance for Linear Inverse Problems</a></h3>
+
+            <ul>
+              <li>Explain the method</li>
+              <li>Compare to DPS</li>
+              <li>Test on toy datasets (GMM or two-moons/spiral, in 2D, for inpainting with $A = (1 0)$ for example.)</li>
+            </ul>
+
+	    <br/><br/>
+
+ <h3>Project-11: <a href="https://arxiv.org/abs/2305.19256">Ambient Diffusion: Learning Clean Distributions from Corrupted Data</a></h3>
+
+            <ul>
+              <li>Explain the mathematical problem</li>
+              <li>Explain Theorem 4.1 and the two given examples fit in</li>
+              <li>Test on toy datasets (GMM or two-moons/spiral, even on 2D datasets, with the examples below Theorem 4.1)</li>
+            </ul>
+
+	    <br/><br/>
+
+
+	    <h3>Project-12: <a href="https://arxiv.org/pdf/2410.02423">PnP-Flow: Plug-and-Play Image Restoration with Flow Matching</a></h3>
+
+            <ul>
+              <li>What is the performance of Algorithm 3 for image restoration if you use another deep neural network denoiser instead of the proposed flow denoiser?</li>
+              <li>Can you comment Proposition 4 and its proof? Especially, is the algorithm deterministic? Can you propose a reformulation of this proposition?</li>
+              <li>What are the experimental limits of PnP-Flow? Can you show experiments, where PnP-Flow fails to restore? (Suggestion : you can look at restoration with very noisy images or inpainting with large masked patches) </li>
+            </ul>
+
+	    <br/><br/>
+
+	    <h3>Project-13 : <a href="https://arxiv.org/pdf/2506.03719">On the Closed-Form of Flow Matching: Generalization Does Not Arise from Target Stochasticity</a></h3>
+            <ul>
+              <li>How does Flow Matching sampling compare to the diffusion models studied
+		in class? What are the main differences and prove in what sense are they
+		equivalent (or not).</li>
+              <li>Can you replicate Figure 1 on a toy dataset of your choice (e.g., random
+		points, rings, mixtures)? How does the dimension dependence of the
+		empirical “collapse time” compare to the theoretical collapse time
+		predicted in Biroli et al.?</li>
+              <li>Can you replicate Figure 2.1 and Figure 3 on toy datasets of your
+		choice, with the goal of identifying the generalization switching time?</li>
+	      <li>Identify how the switching time varies with the dataset geometry and
+		dimension, the flow matching time schedule, and other relevent parameters
+		(model capacity, training time, etc.). Can you explain the trends observed
+		experimentally?</li>
+            </ul>
+
+	    <br/><br/>
+
+	    <h3>Project-14 : <a href="https://arxiv.org/pdf/2505.19712">On the Relation between Rectified Flows and Optimal Transport</a></h3>
+
+            <ul>
+              <li>In the Gaussian mixture case, does the equivalence between the optimal
+		transport (OT) map and the flow matching map (proved for single Gaussians
+		in Theorem 3) still hold?
+		To investigate this, start with numerical experiments comparing OT and
+		flow matching maps between a standard Gaussian and a discrete target
+		measure (e.g., a sum of Dirac masses).
+	      </li>
+              <li>Can you identify another non-Gaussian setting where the OT map and the
+		flow matching map coincide? If yes, formulate the setup precisely and
+		provide a proof of equivalence.
+	      </li>
+              <li>The paper states: “In these cases, it is evident that our goal is not to
+		compute the velocity field exactly, but rather to rely on its
+		approximation by a neural network, a key element which gives the model its
+		generalization properties.”
+	      </li>
+	      <li>Construct an explicit counterexample with disconnected support where
+		iterative rectification does not converge to the OT map, but smoothed
+		rectification does. BUNUS: On the same example, study and compare the
+		convergence behavior of Diffusion Schrödinger Bridge Matching (Appendix F.2).</li>
+            </ul>
+
+	    <br/><br/>
+
+	    
+	    <!-- <h3>Project : <a href=""></a></h3>
+
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+
+	    <br/><br/> -->
+
+
+        </div>
+
+    </body>
+</html>
+
+
+            <!-- <h3>Project-09: <a href="https://arxiv.org/abs/2307.11714">Convergence of SGD for Training Neural Networks with Sliced Wasserstein Losses</a></h3>
+
+            <ul>
+              <li>Summarize the main results of the paper and explain the insight benefits with Sliced Wasserstein.</li>
+              <li>Use Algorithm 1 to learn a generative network for a 2D continuous target distribution.</li>
+              <li>Use the proposed algorithm to learn a generative network for a large-scale image dataset.</li>
+            </ul>
+
+	    <br/><br/> -->
+
+
+            <!-- <h3>Project-10: <a href="https://arxiv.org/abs/2301.10862">Learning an Optimal Transport Brenier Map</a></h3>
+
+            <ul>
+              <li>How can one constrain a neural network to be the gradient of a convex function?</li>
+              <li>Use the algorithm for Brenier maps to compute a generative network for a low-dimensional example.</li>
+              <li>Use the proposed algorithm to learn a generative network for a large-scale image dataset.</li>
+            </ul>
+
+	    <br/><br/> -->
+
+
+	    <!-- <h3>Project-14: <a href="https://arxiv.org/abs/2310.10835">Provable Probabilistic Imaging using Score-Based Generative Priors</a></h3>
+
+            <ul>
+              <li>Can you test this reconstruction method with a pre-trained diffusion model?</li>
+              <li>Can you compare this method with standard diffusion model sampling?</li>
+              <li>Comment the different assumptions of the theoretical part. Can you test the optimilaty of Theorem 1 (in practice)?</li>
+            </ul>
+
+	    <br/><br/> -->
+
+
+	    <!--
+	    <h3>Project-12: <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Huang_Arbitrary_Style_Transfer_ICCV_2017_paper.pdf">Arbitrary Style Transfer in Real-Time with Adaptive Instance Normalization</a></h3>
+
+            <ul>
+              <li>Explain in detail the concept of Adaptive Instance Normalization and compare with simple BatchNorm.</li>
+              <li>Implement AdaIN in order to perform style transfer between two images.</li>
+              <li>Compare with other style transfer method (e.g. by Gatys et al.).</li>
+            </ul>
+		
+
+	    <br/><br/>
+			    -->
+
